@@ -1,13 +1,11 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 ---
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+redjade입니다.
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+이 웹사이트는 **[fastpages](https://github.com/fastai/fastpages)** [^1]로 만들었습니다.
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+[^1]: 주피터 노트북, [마크다운](https://guides.github.com/features/mastering-markdown/), Word 포맷을 지원하는 블로깅 플랫폼.
