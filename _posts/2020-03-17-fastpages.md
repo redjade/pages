@@ -1,9 +1,10 @@
 ---
 toc: true
 layout: post
+comments: true
 description: fastpages를 소개합니다.
 categories: [fastpages]
-title: fastpages 소개 (작성 중)
+title: fastpages 소개
 ---
 # 블로그 고민
 
@@ -104,3 +105,9 @@ merge해야 하는가. 그 장대한 diff를 들여다봐야 하는가.
 브라우저로 수정해서 커밋/푸시할 수도 있고, 별도의 SSH Key를 등록한 후 
 git으로 clone해서 수정하고 커밋/푸시할 수도 있다. 푸시, 액션 실행, 반영까지는
 몇 분 걸리지만 만족스럽다.
+
+# 그래서
+
+기본 한글 폰트가 우악스럽다는 점 외에는, 익숙해져야겠지만 만족스럽다. 덧글
+기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 [개발자분들](https://github.com/fastai/fastpages/graphs/contributors)께 감사드린다.
+보은의 의미로 작성한 fastpages 설치기를 마친다.
