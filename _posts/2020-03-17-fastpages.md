@@ -37,10 +37,10 @@ title: fastpages 소개
 Jekyll로 정적인 페이지로 만들고 [Github Pages](https://pages.github.com/)로
 올리는 것이었다. 이 조합이 가장 좋아 보였지만, 실행하지 않았다.
 Jekyll은 루비로 구현되어 있어서 루비 버전과 Jekyll gem을 업데이트하느라
-신경쓰일 것 같고, 포스트를 수정하고 추가할 때마다 생성해서 push하는 게 번거로울
+신경쓰일 것 같고, 포스트를 수정하고 추가할 때마다 **생성해서** 푸시하는 게 번거로울
 것 같고, 주피터 노트북을 convert하는 과정 역시 번거로울 것 같고 (github push
 hook에 스크립트를 넣으면 될까), 블로그 편집 환경을 어딘가 개인 시스템이나
-개인화된 환경에서 유지하는게 오래가지 않을 것 같아서였다.
+개인화된 환경에서 유지[^1]하는게 오래가지 않을 것 같아서였다.
 아, 이제는 귀찮음이 블로그를 쓰지 않는 주요한 이유가 된 것일까.
 
 # fastpages
@@ -87,8 +87,7 @@ merge해야 하는가. 그 장대한 diff를 들여다봐야 하는가.
 아래의 파일들을 백업하고, 처음부터 템플릿 생성을 하는 방법. 좀 귀찮긴 하지만
 간단하게끔 유지하기 위한 최선의 선택이다.
 
-자동으로 하려면, 이슈 탭에서 새 이슈를 누르고, '\[fastpages\] Automated Upgrade
-' 템플릿으로 이슈를 만들고, submit하면, 한참 기다리면 된다고 한다.
+자동으로 하려면, 이슈 탭에서 새 이슈를 누르고, '\[fastpages\] Automated Upgrade' 템플릿으로 이슈를 만들고, submit하면, 한참 기다리면 된다고 한다.
 
 자동화 방법으로 한번 해봤더니, 액션에 추가되는데 소식이 없다. 이슈 로그에 
 최신 코드라서 할일이 없단다. 다음번 코드 수정이 있으면 해봐야겠지만, 
@@ -101,6 +100,7 @@ merge해야 하는가. 그 장대한 diff를 들여다봐야 하는가.
 
 * [설정 수정](https://github.com/redjade/pages/commit/95f0deeef77cd8c2e244f2b793d655e5f303b2c4) : 페이지 제목과 설명, 수식 옵션 수정
 * [favicon 비활성화](https://github.com/redjade/pages/commit/666291126f13090b7ed55654445adf554f474457), [템플릿 문서 숨기기](https://github.com/redjade/pages/commit/4ccf0ad81f331e3b34fab4f396f6d59ec6076025), [대문 페이지](https://github.com/redjade/pages/commit/abab61fa436b0314b2d6b0a62cc7147c6f8722c2)와 [About 페이지](https://github.com/redjade/pages/commit/ee7d156afabe81518442d5a36f4cd26a915ed32e) 수정
+* [utterances 설치](https://github.com/apps/utterances)
 
 브라우저로 수정해서 커밋/푸시할 수도 있고, 별도의 SSH Key를 등록한 후 
 git으로 clone해서 수정하고 커밋/푸시할 수도 있다. 푸시, 액션 실행, 반영까지는
@@ -111,3 +111,5 @@ git으로 clone해서 수정하고 커밋/푸시할 수도 있다. 푸시, 액�
 기본 한글 폰트가 우악스럽다는 점 외에는, 익숙해져야겠지만 만족스럽다. 덧글
 기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 [개발자분들](https://github.com/fastai/fastpages/graphs/contributors)께 감사드린다.
 보은의 의미로 작성한 fastpages 설치기를 마친다.
+
+[^1]: Jekyll 환경을 구성하지 않고도 사용하는 방법이 있었다! 포스트가 감사하게도 참 친절하다. [쉽고 빠르게 수준 급의 GitHub 블로그 만들기 - jekyll remote theme으로](https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html)
