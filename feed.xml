@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-17T09:34:15-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">fastpages 소개</title><link href="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html" rel="alternate" type="text/html" title="fastpages 소개" /><published>2020-03-17T00:00:00-05:00</published><updated>2020-03-17T00:00:00-05:00</updated><id>https://redjade.github.io/pages/fastpages/2020/03/17/fastpages</id><content type="html" xml:base="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html">&lt;h1 id=&quot;블로그-고민&quot;&gt;블로그 고민&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-17T09:46:55-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;국문 번역 트윗 : https://twitter.com/Imseong/status/1239212007779229696&lt;/li&gt;
+  &lt;li&gt;원문 : https://twitter.com/intentionally/status/1234918066649272325
+    &lt;ul&gt;
+      &lt;li&gt;모아서 보려면 https://threader.app/thread/1234918066649272325&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;원래 트윗과 덧글의 링크
+    &lt;ul&gt;
+      &lt;li&gt;https://fortelabs.co/blog/how-to-take-smart-notes/&lt;/li&gt;
+      &lt;li&gt;https://jeffhuang.com/productivity_text_file/&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">참고 국문 번역 트윗 : https://twitter.com/Imseong/status/1239212007779229696 원문 : https://twitter.com/intentionally/status/1234918066649272325 모아서 보려면 https://threader.app/thread/1234918066649272325 원래 트윗과 덧글의 링크 https://fortelabs.co/blog/how-to-take-smart-notes/ https://jeffhuang.com/productivity_text_file/</summary></entry><entry><title type="html">fastpages 소개</title><link href="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html" rel="alternate" type="text/html" title="fastpages 소개" /><published>2020-03-17T00:00:00-05:00</published><updated>2020-03-17T00:00:00-05:00</updated><id>https://redjade.github.io/pages/fastpages/2020/03/17/fastpages</id><content type="html" xml:base="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html">&lt;h1 id=&quot;블로그-고민&quot;&gt;블로그 고민&lt;/h1&gt;
 
 &lt;p&gt;그동안 cgi와 버클리DB(gdbm이었던가)로 된 게시판을 시작으로 MySQL과 워드프레스 등
 설치형 블로그와, 네이버 블로그, (구글) 블로거, 워드프레스닷컴, 미디엄 등의
