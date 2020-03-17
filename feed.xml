@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-17T04:16:18-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">fastpages 소개 (작성 중)</title><link href="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html" rel="alternate" type="text/html" title="fastpages 소개 (작성 중)" /><published>2020-03-17T00:00:00-05:00</published><updated>2020-03-17T00:00:00-05:00</updated><id>https://redjade.github.io/pages/fastpages/2020/03/17/fastpages</id><content type="html" xml:base="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html">&lt;h1 id=&quot;블로그-고민&quot;&gt;블로그 고민&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-17T04:27:33-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">fastpages 소개 (작성 중)</title><link href="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html" rel="alternate" type="text/html" title="fastpages 소개 (작성 중)" /><published>2020-03-17T00:00:00-05:00</published><updated>2020-03-17T00:00:00-05:00</updated><id>https://redjade.github.io/pages/fastpages/2020/03/17/fastpages</id><content type="html" xml:base="https://redjade.github.io/pages/fastpages/2020/03/17/fastpages.html">&lt;h1 id=&quot;블로그-고민&quot;&gt;블로그 고민&lt;/h1&gt;
 
 &lt;p&gt;그동안 cgi와 버클리DB로 된 게시판을 시작으로 MySQL과 워드프레스 등 설치형
 블로그와, 네이버 블로그, (구글) 블로거, 워드프레스닷컴, 미디엄 등의 서비스형
@@ -8,21 +8,27 @@
 &lt;p&gt;최근에는 이런 필요를 만족하는 블로그를 하나 써보고 싶었다. 블로그 시스템에
 기대하는 기능은 이랬다.&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;와 같이 수식 표현&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;마크다운&lt;/a&gt;과 같은
 마크업 언어 사용 가능&lt;/li&gt;
   &lt;li&gt;vi나 vscode와 같은 텍스트 에디터로 편집이 가능&lt;/li&gt;
   &lt;li&gt;웹으로 편집 가능&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://jupyter.org/&quot;&gt;주피터 노트북&lt;/a&gt;을 올릴 수 있으면 좋겠음&lt;/li&gt;
-  &lt;li&gt;만약 설치형 블로그라면&lt;/li&gt;
-  &lt;li&gt;최근 코드로 업데이트하는 과정이 고통스럽지 않기를&lt;/li&gt;
-  &lt;li&gt;데이터 저장 포맷을 변경하거나 DB를 업데이트하는 과정이 고통스럽지 않기를&lt;/li&gt;
-  &lt;li&gt;설치와 업데이트 과정을 익히는 데 드는 품이 적게 들기를&lt;/li&gt;
-  &lt;li&gt;만약 서비스형 블로그라면&lt;/li&gt;
-  &lt;li&gt;무료라면 좋겠음&lt;/li&gt;
-  &lt;li&gt;도메인도 적당하면 좋겠고, path도 여러 개 붙일 수 있으면 좋겠음&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt;만약 설치형 블로그라면
+    &lt;ul&gt;
+      &lt;li&gt;최근 코드로 업데이트하는 과정이 고통스럽지 않기를&lt;/li&gt;
+      &lt;li&gt;데이터 저장 포맷을 변경하거나 DB를 업데이트하는 과정이 고통스럽지 않기를&lt;/li&gt;
+      &lt;li&gt;설치와 업데이트 과정을 익히는 데 드는 품이 적게 들기를&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;만약 서비스형 블로그라면
+    &lt;ul&gt;
+      &lt;li&gt;무료라면 좋겠음&lt;/li&gt;
+      &lt;li&gt;도메인도 적당하면 좋겠고, path도 여러 개 붙일 수 있으면 좋겠음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;기대를 만족할 것 같은 설치형 블로그로는 &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;로 정적인
 페이지로 만들고 &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;로 올리는 것이었다.
@@ -39,7 +45,12 @@
 
 &lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;To be clear: &lt;a href=&quot;https://twitter.com/github?ref_src=twsrc%5Etfw&quot;&gt;@GitHub&lt;/a&gt; Actions has been a game changer for us. It means we can build amazing stuff like fastpages with &lt;a href=&quot;https://twitter.com/HamelHusain?ref_src=twsrc%5Etfw&quot;&gt;@HamelHusain&lt;/a&gt;, entirely for free, and keeping all the data open.&lt;br /&gt;&lt;br /&gt;We&amp;#39;re really grateful to &lt;a href=&quot;https://twitter.com/github?ref_src=twsrc%5Etfw&quot;&gt;@GitHub&lt;/a&gt; for making it available, and for supporting &lt;a href=&quot;https://twitter.com/HamelHusain?ref_src=twsrc%5Etfw&quot;&gt;@HamelHusain&lt;/a&gt;&amp;#39;s work. &lt;a href=&quot;https://t.co/7qWUnFgILf&quot;&gt;https://t.co/7qWUnFgILf&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jeremy Howard (@jeremyphoward) &lt;a href=&quot;https://twitter.com/jeremyphoward/status/1236037582363832320?ref_src=twsrc%5Etfw&quot;&gt;March 6, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">블로그 고민</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://redjade.github.io/pages/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://redjade.github.io/pages/jupyter/2020/02/20/test</id><content type="html" xml:base="https://redjade.github.io/pages/jupyter/2020/02/20/test.html">&lt;!--
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/features/actions&quot;&gt;Github Actions&lt;/a&gt;를 사용해서 Jekyll로
+포스트를 가공하고 Github Pages로 바로 올려주는 코드라고. Github Actions가 
+생소했다. 잠깐 살펴보니, git event에 대해 workflow를 실행시켜주는 서비스다.
+그러니까 무료로 컴퓨팅 그리고 컴퓨팅에 필요한 저장공간을 제공해준다는 것 같다.&lt;/p&gt;</content><author><name></name></author><summary type="html">블로그 고민</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://redjade.github.io/pages/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://redjade.github.io/pages/jupyter/2020/02/20/test</id><content type="html" xml:base="https://redjade.github.io/pages/jupyter/2020/02/20/test.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
