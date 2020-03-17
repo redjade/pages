@@ -183,10 +183,10 @@ window.onload = wrap_img;
 Jekyll로 정적인 페이지로 만들고 <a href="https://pages.github.com/">Github Pages</a>로
 올리는 것이었다. 이 조합이 가장 좋아 보였지만, 실행하지 않았다.
 Jekyll은 루비로 구현되어 있어서 루비 버전과 Jekyll gem을 업데이트하느라
-신경쓰일 것 같고, 포스트를 수정하고 추가할 때마다 생성해서 push하는 게 번거로울
+신경쓰일 것 같고, 포스트를 수정하고 추가할 때마다 <strong>생성해서</strong> 푸시하는 게 번거로울
 것 같고, 주피터 노트북을 convert하는 과정 역시 번거로울 것 같고 (github push
 hook에 스크립트를 넣으면 될까), 블로그 편집 환경을 어딘가 개인 시스템이나
-개인화된 환경에서 유지하는게 오래가지 않을 것 같아서였다.
+개인화된 환경에서 유지<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>하는게 오래가지 않을 것 같아서였다.
 아, 이제는 귀찮음이 블로그를 쓰지 않는 주요한 이유가 된 것일까.</p>
 
 <h1 id="fastpages">
@@ -253,8 +253,7 @@ merge해야 하는가. 그 장대한 diff를 들여다봐야 하는가.</p>
 아래의 파일들을 백업하고, 처음부터 템플릿 생성을 하는 방법. 좀 귀찮긴 하지만
 간단하게끔 유지하기 위한 최선의 선택이다.</p>
 
-<p>자동으로 하려면, 이슈 탭에서 새 이슈를 누르고, ‘[fastpages] Automated Upgrade
-‘ 템플릿으로 이슈를 만들고, submit하면, 한참 기다리면 된다고 한다.</p>
+<p>자동으로 하려면, 이슈 탭에서 새 이슈를 누르고, ‘[fastpages] Automated Upgrade’ 템플릿으로 이슈를 만들고, submit하면, 한참 기다리면 된다고 한다.</p>
 
 <p>자동화 방법으로 한번 해봤더니, 액션에 추가되는데 소식이 없다. 이슈 로그에 
 최신 코드라서 할일이 없단다. 다음번 코드 수정이 있으면 해봐야겠지만, 
@@ -271,6 +270,7 @@ merge해야 하는가. 그 장대한 diff를 들여다봐야 하는가.</p>
 <a href="https://github.com/redjade/pages/commit/95f0deeef77cd8c2e244f2b793d655e5f303b2c4">설정 수정</a> : 페이지 제목과 설명, 수식 옵션 수정</li>
   <li>
 <a href="https://github.com/redjade/pages/commit/666291126f13090b7ed55654445adf554f474457">favicon 비활성화</a>, <a href="https://github.com/redjade/pages/commit/4ccf0ad81f331e3b34fab4f396f6d59ec6076025">템플릿 문서 숨기기</a>, <a href="https://github.com/redjade/pages/commit/abab61fa436b0314b2d6b0a62cc7147c6f8722c2">대문 페이지</a>와 <a href="https://github.com/redjade/pages/commit/ee7d156afabe81518442d5a36f4cd26a915ed32e">About 페이지</a> 수정</li>
+  <li><a href="https://github.com/apps/utterances">utterances 설치</a></li>
 </ul>
 
 <p>브라우저로 수정해서 커밋/푸시할 수도 있고, 별도의 SSH Key를 등록한 후 
@@ -283,6 +283,14 @@ git으로 clone해서 수정하고 커밋/푸시할 수도 있다. 푸시, 액�
 <p>기본 한글 폰트가 우악스럽다는 점 외에는, 익숙해져야겠지만 만족스럽다. 덧글
 기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 <a href="https://github.com/fastai/fastpages/graphs/contributors">개발자분들</a>께 감사드린다.
 보은의 의미로 작성한 fastpages 설치기를 마친다.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Jekyll 환경을 구성하지 않고도 사용하는 방법이 있었다! 포스트가 감사하게도 참 친절하다. <a href="https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html">쉽고 빠르게 수준 급의 GitHub 블로그 만들기 - jekyll remote theme으로</a> <a href="#fnref:1" class="reversefootnote">↩</a></p>
+    </li>
+  </ol>
+</div>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
