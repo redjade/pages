@@ -111,7 +111,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -133,6 +133,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#fastpages-설치">fastpages 설치</a></li>
 <li class="toc-entry toc-h1"><a href="#fastpages-업그레이드">fastpages 업그레이드</a></li>
 <li class="toc-entry toc-h1"><a href="#redjade-pages-설치">redjade pages 설치</a></li>
+<li class="toc-entry toc-h1"><a href="#기능은-어떤가">기능은 어떤가</a></li>
 <li class="toc-entry toc-h1"><a href="#그래서">그래서</a></li>
 </ul><h1 id="블로그-고민">
 <a class="anchor" href="#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B3%A0%EB%AF%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>블로그 고민</h1>
@@ -150,7 +151,8 @@ window.onload = wrap_img;
     <ul>
       <li>
 <a href="https://www.mathjax.org/">MathJax</a>와 같이 수식 표현 가능</li>
-      <li>vi나 vscode와 같은 텍스트 에디터로 편집이 가능</li>
+      <li>
+<a href="https://www.vim.org/">vi</a>나 <a href="https://code.visualstudio.com/">vscode</a>와 같은 텍스트 에디터로 편집이 가능</li>
       <li>웹으로 편집 가능</li>
     </ul>
   </li>
@@ -276,6 +278,19 @@ merge해야 하는가. 그 장대한 diff를 들여다봐야 하는가.</p>
 <p>브라우저로 수정해서 커밋/푸시할 수도 있고, 별도의 SSH Key를 등록한 후 
 git으로 clone해서 수정하고 커밋/푸시할 수도 있다. 푸시, 액션 실행, 반영까지는
 몇 분 걸리지만 만족스럽다.</p>
+
+<h1 id="기능은-어떤가">
+<a class="anchor" href="#%EA%B8%B0%EB%8A%A5%EC%9D%80-%EC%96%B4%EB%96%A4%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>기능은 어떤가</h1>
+
+<p>먼저 MathJax.</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>softmax</mtext><mo stretchy="false">(</mo><mi>z</mi><msub><mo stretchy="false">)</mo><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>z</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><munder><mo>∑</mo><mi>j</mi></munder><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>z</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{softmax}(z)_i = \frac{\exp(z_i)}{\sum_j \exp(z_j)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">softmax</span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.5488180000000003em;vertical-align:-1.1218180000000002em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16195399999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.43581800000000004em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.04398em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.04398em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1218180000000002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+
+<p>작성 방식. clone해서 터미널이나 vscode로 편집할 수 있다. 반영은 푸시. 웹으로는,
+github에 접속해서 파일 찾아서 편집하고 바로 커밋할 수 있다. 웹에서 커밋하면
+이어서 액션이 실행되어 반영된다.</p>
+
+<p>포맷은 마크다운, 주피터 노트북, 마이크로소프트 워드를 지원한다고.</p>
 
 <h1 id="그래서">
 <a class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h1>
