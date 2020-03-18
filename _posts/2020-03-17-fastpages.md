@@ -117,13 +117,15 @@ github에 접속해서 파일 찾아서 편집하고 바로 커밋할 수 있다
 이어서 액션이 실행되어 반영된다.
 
 포맷은 마크다운, 주피터 노트북, 마이크로소프트 워드를 지원한다고.
+예제를 살펴보자. (워드로 된 예제는 못 찾았다.)
+* 마크다운 : [An Example Markdown Post](https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html)
+* 주피터 노트북 : [Fastpages Notebook Blog Post](https://fastpages.fast.ai/jupyter/2020/02/20/test.html)
 
 # 그래서
 
-기본 한글 폰트가 우악스럽다는 점 외에는, 익숙해져야겠지만 만족스럽다. 덧글
-기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 [개발자분들](https://github.com/fastai/fastpages/graphs/contributors)께 감사드린다.
+기본 한글 폰트가 우악스럽다는 점 외에는, fastpages 사용에 익숙해져야겠지만,
+꽤 만족스럽다. 덧글 기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 [개발자분들](https://github.com/fastai/fastpages/graphs/contributors)께 감사드린다.
 보은의 의미로 작성한 fastpages 설치기를 마친다.
-
 
 
 [^1]: Jekyll 환경을 구성하지 않고도 사용하는 방법이 있었다! 포스트가 감사하게도 참 친절하다. [쉽고 빠르게 수준 급의 GitHub 블로그 만들기 - jekyll remote theme으로](https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html)
