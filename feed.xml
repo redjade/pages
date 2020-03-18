@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-18T00:48:38-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-18T00:55:53-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;국문 번역 트윗 : https://twitter.com/Imseong/status/1239212007779229696&lt;/li&gt;
   &lt;li&gt;원문 : https://twitter.com/intentionally/status/1234918066649272325
@@ -147,12 +147,17 @@ git으로 clone해서 수정하고 커밋/푸시할 수도 있다. 푸시, 액�
 github에 접속해서 파일 찾아서 편집하고 바로 커밋할 수 있다. 웹에서 커밋하면
 이어서 액션이 실행되어 반영된다.&lt;/p&gt;
 
-&lt;p&gt;포맷은 마크다운, 주피터 노트북, 마이크로소프트 워드를 지원한다고.&lt;/p&gt;
+&lt;p&gt;포맷은 마크다운, 주피터 노트북, 마이크로소프트 워드를 지원한다고.
+예제를 살펴보자. (워드로 된 예제는 못 찾았다.)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;마크다운 : &lt;a href=&quot;https://fastpages.fast.ai/markdown/2020/01/14/test-markdown-post.html&quot;&gt;An Example Markdown Post&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;주피터 노트북 : &lt;a href=&quot;https://fastpages.fast.ai/jupyter/2020/02/20/test.html&quot;&gt;Fastpages Notebook Blog Post&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;그래서&quot;&gt;그래서&lt;/h1&gt;
 
-&lt;p&gt;기본 한글 폰트가 우악스럽다는 점 외에는, 익숙해져야겠지만 만족스럽다. 덧글
-기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 &lt;a href=&quot;https://github.com/fastai/fastpages/graphs/contributors&quot;&gt;개발자분들&lt;/a&gt;께 감사드린다.
+&lt;p&gt;기본 한글 폰트가 우악스럽다는 점 외에는, fastpages 사용에 익숙해져야겠지만,
+꽤 만족스럽다. 덧글 기능까지 확인하면 끝. 쓸만한 블로그 시스템을 만든 &lt;a href=&quot;https://github.com/fastai/fastpages/graphs/contributors&quot;&gt;개발자분들&lt;/a&gt;께 감사드린다.
 보은의 의미로 작성한 fastpages 설치기를 마친다.&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
