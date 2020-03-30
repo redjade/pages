@@ -111,7 +111,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -127,7 +127,25 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="meta-pseudo-labels-훑기">Meta Pseudo Labels 훑기</h1>
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#meta-pseudo-labels-훑기">Meta Pseudo Labels 훑기</a></li>
+<li class="toc-entry toc-h1"><a href="#들어가기">들어가기</a></li>
+<li class="toc-entry toc-h1"><a href="#동기">동기</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#label-smoothing">Label smoothing</a></li>
+<li class="toc-entry toc-h2"><a href="#temperature-tuning">Temperature tuning</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#참고">참고</a></li>
+<li class="toc-entry toc-h1"><a href="#용어">용어</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#label-smoothing-1">Label Smoothing</a></li>
+<li class="toc-entry toc-h2"><a href="#준지도학습에서-pseudo-label">준지도학습에서 pseudo label</a></li>
+<li class="toc-entry toc-h2"><a href="#pseudo-label">Pseudo Label</a></li>
+</ul>
+</li>
+</ul><h1 id="meta-pseudo-labels-훑기">
+<a class="anchor" href="#meta-pseudo-labels-%ED%9B%91%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Meta Pseudo Labels 훑기</h1>
 
 <ul>
   <li>심층신경망 학습은 네트웍의 예측과 타겟 분포 사이의 cross entropy를 최소화하는 것으로 해석할 수 있음.</li>
@@ -142,7 +160,8 @@ window.onload = wrap_img;
   <li>실험은 CIFAR-10, SVHN, ImageNet 에서 state-of-the-art.</li>
 </ul>
 
-<h1 id="들어가기">들어가기</h1>
+<h1 id="들어가기">
+<a class="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>들어가기</h1>
 
 <ul>
   <li>cross entropy loss : KL divergence from a target distribution over all the possible classes to the distribution predicted by a network
@@ -151,7 +170,8 @@ window.onload = wrap_img;
       <li>지도학습의 경우, one-hot, smoothed version of one-hot(label smoothing<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>)</li>
       <li>준지도학습의 경우, pseudo label라고도 부르는 타겟 분포를 사용하는데,</li>
       <li>label 있는 데이터로 학습한 날카로워지고 무뎌진(약해진) teacher 모델을 이용해서</li>
-      <li>label 없는 데이터를 처리한 분포를 타겟 분포로 사용한다.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup></li>
+      <li>label 없는 데이터를 처리한 분포를 타겟 분포로 사용한다.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>
+</li>
       <li>이 두 경우 모두 학습 전의 _사전 정보(prior)_로 디자인한 경험지식(heuristic)이라서, 학습되는 신경망의 학습 상태에 맞춰서 조정할 수 없다는 약점이 내재해 있다.</li>
     </ul>
   </li>
@@ -165,7 +185,8 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<h1 id="동기">동기</h1>
+<h1 id="동기">
+<a class="anchor" href="#%EB%8F%99%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>동기</h1>
 <ul>
   <li>세팅
     <ul>
@@ -174,8 +195,9 @@ window.onload = wrap_img;
         <table>
           <tbody>
             <tr>
-              <td>보통 타겟 분포 $q_*(Y</td>
-              <td>X)$와 모델 분포 $p_\Theta(Y\X)$ 사이의 크로스 엔트로피를 최소화함</td>
+              <td>보통 타겟 분포 $q_* ( Y</td>
+              <td>X )$와 모델 분포 $p_\Theta ( Y</td>
+              <td>X )$ 사이의 크로스 엔트로피를 최소화함</td>
             </tr>
           </tbody>
         </table>
@@ -190,9 +212,9 @@ window.onload = wrap_img;
 <table>
   <tbody>
     <tr>
-      <td>Hard label : $q_*(Y</td>
-      <td>x) \overset{\Delta}{=} one-hot(argmax_y q_\xi(y</td>
-      <td>x))$</td>
+      <td>Hard label : $q_* ( Y</td>
+      <td>x ) \overset{\Delta}{=} one-hot(argmax_y q_\xi ( y</td>
+      <td>x ))$</td>
     </tr>
   </tbody>
 </table>
@@ -200,9 +222,9 @@ window.onload = wrap_img;
 <table>
   <tbody>
     <tr>
-      <td>Soft label : $q_*(Y</td>
-      <td>x) \overset{\Delta}{=} q_\xi(Y</td>
-      <td>x)$</td>
+      <td>Soft label : $q_* ( Y</td>
+      <td>x ) \overset{\Delta}{=} q_\xi ( Y</td>
+      <td>x )$</td>
     </tr>
   </tbody>
 </table>
@@ -211,20 +233,27 @@ window.onload = wrap_img;
   <li>타겟 분포를 약간 조정하는 휴리스틱 두 가지가 있다: label smoothing과 temperature tuning.</li>
 </ul>
 
-<h2 id="label-smoothing">Label smoothing</h2>
+<h2 id="label-smoothing">
+<a class="anchor" href="#label-smoothing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Label smoothing</h2>
 
-<h2 id="temperature-tuning">Temperature tuning</h2>
+<h2 id="temperature-tuning">
+<a class="anchor" href="#temperature-tuning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Temperature tuning</h2>
 
-<h1 id="참고">참고</h1>
+<h1 id="참고">
+<a class="anchor" href="#%EC%B0%B8%EA%B3%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>참고</h1>
 
 <ul>
   <li><a href="https://arxiv.org/abs/2003.10580">Meta Pseudo Labels</a></li>
 </ul>
 
-<h1 id="용어">용어</h1>
-<h2 id="label-smoothing-1">Label Smoothing</h2>
-<h2 id="준지도학습에서-pseudo-label">준지도학습에서 pseudo label</h2>
-<h2 id="pseudo-label">Pseudo Label</h2>
+<h1 id="용어">
+<a class="anchor" href="#%EC%9A%A9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>용어</h1>
+<h2 id="label-smoothing-1">
+<a class="anchor" href="#label-smoothing-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Label Smoothing</h2>
+<h2 id="준지도학습에서-pseudo-label">
+<a class="anchor" href="#%EC%A4%80%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5%EC%97%90%EC%84%9C-pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>준지도학습에서 pseudo label</h2>
+<h2 id="pseudo-label">
+<a class="anchor" href="#pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pseudo Label</h2>
 
 <p><a href="http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf">Pseudo-Label</a> 방법은, 사전학습된 모델로 label 없는 데이터를 처리한 예측 확률의 최대값을 해당 데이터의 타겟 클래스로 삼는 방법이다. 사전학습된 모델을 이용해서, label 데이터와 unlabel 데이터를 <em>동시에</em> 학습한다. unlabel 데이터의 loss function은 지도학습의 loss와 동일한 형태를 가지되 regularizer 스타일로 loss function에 더하며 hyperparameter로 강도를 조절한다.</p>
 
@@ -233,22 +262,22 @@ window.onload = wrap_img;
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p><a href="https://arxiv.org/abs/1906.02629">When Does Label Smoothing Help?</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p><a href="https://arxiv.org/abs/1906.02629">When Does Label Smoothing Help?</a> <a href="#fnref:1" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:2">
-      <p><a href="https://arxiv.org/abs/1512.00567">Rethinking the Inception Architecture for Computer Vision</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p><a href="https://arxiv.org/abs/1512.00567">Rethinking the Inception Architecture for Computer Vision</a> <a href="#fnref:2" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:3">
-      <p><a href="https://arxiv.org/abs/1904.12848">Unsupervised Data Augmentation for Consistency Training</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p><a href="https://arxiv.org/abs/1904.12848">Unsupervised Data Augmentation for Consistency Training</a> <a href="#fnref:3" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:4">
-      <p><a href="https://arxiv.org/abs/1905.02249">MixMatch: A Holistic Approach to Semi-Supervised Learning</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p><a href="https://arxiv.org/abs/1905.02249">MixMatch: A Holistic Approach to Semi-Supervised Learning</a> <a href="#fnref:4" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:5">
-      <p>Chapelle, O., and Zien, A.  Semi-supervised classication by low density separation. AISTATS, 2005, (pp.5764). <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+      <p>Chapelle, O., and Zien, A.  Semi-supervised classication by low density separation. AISTATS, 2005, (pp.5764). <a href="#fnref:5" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:6">
-      <p>Yves  Grandvalet  and  Yoshua  Bengio,   Entropy  Regularization,    In: Semi-Supervised  Learning,  pages 151–168, MIT Press, 2006. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+      <p>Yves  Grandvalet  and  Yoshua  Bengio,   Entropy  Regularization,    In: Semi-Supervised  Learning,  pages 151–168, MIT Press, 2006. <a href="#fnref:6" class="reversefootnote">↩</a></p>
     </li>
   </ol>
 </div>
