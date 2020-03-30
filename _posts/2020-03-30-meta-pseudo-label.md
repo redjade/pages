@@ -7,7 +7,7 @@ hide: true
 title: <Meta Pseudo Label> 읽기
 ---
 
-# 훑기
+# Meta Pseudo Labels 훑기
 
 * 심층신경망 학습은 네트웍의 예측과 타겟 분포 사이의 cross entropy를 최소화하는 것으로 해석할 수 있음.
 * 지도학습에서 타겟 분포는 보통 실제 one-hot 벡터.
@@ -21,18 +21,33 @@ title: <Meta Pseudo Label> 읽기
 
 * cross entropy loss : KL divergence from a target distribution over all the possible classes to the distribution predicted by a network
   * 여기서 자연스레 이어지는 질문: 이 타겟 분포는 무엇이어야 하지?
-  * 지도학습의 경우, one-hot, smoothed version of one-hot(label smoothing[^1][^2])
-  * 준지도학습의 경우, pseudo label이라고 부르는 타겟 분포를 부르는데,
+  * 지도학습의 경우, one-hot, smoothed version of one-hot(label smoothing[^1] [^2])
+  * 준지도학습의 경우, pseudo label라고도 부르는 타겟 분포를 사용하는데,
   * label 있는 데이터로 학습한 날카로워지고 무뎌진(약해진) teacher 모델을 이용해서
-  * label 없는 데이터를 처리한 분포를 타겟 분포로 사용한다.[^3][^4]
+  * label 없는 데이터를 처리한 분포를 타겟 분포로 사용한다.[^3] [^4]
   * 이 두 경우 모두 학습 전의 _사전 정보(prior)_로 디자인한 경험지식(heuristic)이라서, 학습되는 신경망의 학습 상태에 맞춰서 조정할 수 없다는 약점이 내재해 있다.
 
+* 그래서 타겟 분포를 메타-학습할 수 있는 방법을 제안함.
+  * teacher model 디자인 : 메인 모델(앞으로 student 모델이라고 부르겠음)을 학습할 때 사용할 input data에 대해서 분포를 할당함.
+  * student model 학습 : student model을 검증 데이터셋으로 진행한 성능 평가를 근거로 해서, 다음번에 검증 데이터셋으로 더 나은 성능을 보일 만한 타겟 분포를 teacher가 생성함.
+  * 이 방법이 pseudo label 기법과 유사해서 _Meta Pseudo Label_이라고 이름붙임.
 
 # 참고
 
-* https://arxiv.org/abs/2003.10580
+* [Meta Pseudo Labels](https://arxiv.org/abs/2003.10580)
 
-[^1]: When Does Label Smoothing Help? https://arxiv.org/abs/1906.02629
-[^2]: Rethinking the Inception Architecture for Computer Vision https://arxiv.org/abs/1512.00567
-[^3]: Unsupervised Data Augmentation for Consistency Training https://arxiv.org/abs/1904.12848
-[^4]: MixMatch: A Holistic Approach to Semi-Supervised Learning https://arxiv.org/abs/1905.02249
+# 용어
+## Label Smoothing
+## 준지도학습에서 pseudo label
+## Pseudo Label
+
+[Pseudo-Label](http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf) 방법은, 사전학습된 모델로 label 없는 데이터를 처리한 예측 확률의 최대값을 해당 데이터의 타겟 클래스로 삼는 방법이다. 사전학습된 모델을 이용해서, label 데이터와 unlabel 데이터를 _동시에_ 학습한다. unlabel 데이터의 loss function은 지도학습의 loss와 동일한 형태를 가지되 regularizer 스타일로 loss function에 더하며 hyperparameter로 강도를 조절한다. 
+
+_cluster assumption_[^1]에 따르면, 일반화를 위해서 결정 경계(decision boundary)는 저밀도 구간에 있어야 한다. 한편, _entropy regularization_[^1]에 따르면 레이블 없는 데이터가 보여주는 클래스 확률 분포의 조건부 엔트로피를 최소화할 때 클래스 사이의 밀도 분포를 낮게 만들어준다. 즉, 클래스 사이의 분포를 덜 겹치게하기 위해서 unlabel 데이터의 엔트로피를 최소화하는 것이다. Pseudo Label 논문은 pseudo label로 추가한 loss가 entropy regularization의 형태와 동일함을 보이고 있다.
+
+[^1]: [When Does Label Smoothing Help?](https://arxiv.org/abs/1906.02629)
+[^2]: [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/abs/1512.00567)
+[^3]: [Unsupervised Data Augmentation for Consistency Training](https://arxiv.org/abs/1904.12848)
+[^4]: [MixMatch: A Holistic Approach to Semi-Supervised Learning](https://arxiv.org/abs/1905.02249)
+[^1]: Chapelle, O., and Zien, A.  Semi-supervised classication by low density separation. AISTATS, 2005, (pp.5764).
+[^1]: Yves  Grandvalet  and  Yoshua  Bengio,   Entropy  Regularization,    In: Semi-Supervised  Learning,  pages 151–168, MIT Press, 2006.
