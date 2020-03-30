@@ -36,14 +36,14 @@ title: <Meta Pseudo Label> 읽기
 # 동기
 * 세팅
   * C개의 클래스가 있고 $\Theta$로 파라미터화된 모델
-  * 보통 타겟 분포 $q_* ( Y | X )$와 모델 분포 $p_\Theta ( Y | X )$ 사이의 크로스 엔트로피를 최소화함
+  * 보통 타겟 분포 $q_* ( Y \mid X )$와 모델 분포 $p_\Theta ( Y \mid X )$ 사이의 크로스 엔트로피를 최소화함
 * 완전 지도 학습에서는, 타겟 분포는 one-hot 벡터로 정의된다.
 * knowledge distillation에서는 잘 학습된 더 큰 모델의 "dark knowledge"를 작은 모델로 압축한다. 더 큰 모델의 분포를 타겟 분포로 사용한다.
 * 준지도 학습에서는, 제한된 label 데이터로 학습한 $q_\xi$ 모델로 unlabl 데이터의 클래스를 예측한 분포를 사용한다. 두 가지 버전이 있다. 그런데 이 둘은 일반적으로 잘 작동하지만 종종 최적의 선택이 아니라는 최근 연구가 있다.
 
-Hard label : $q_* ( Y | x ) \overset{\Delta}{=} one-hot(argmax_y q_\xi ( y | x ))$
+Hard label : $q_* ( Y \mid x ) \overset{\Delta}{=} one-hot(argmax_y q_\xi ( y \mid x ))$
 
-Soft label : $q_* ( Y | x ) \overset{\Delta}{=} q_\xi ( Y | x )$
+Soft label : $q_* ( Y \mid x ) \overset{\Delta}{=} q_\xi ( Y \mid x )$
 
 * 타겟 분포를 약간 조정하는 휴리스틱 두 가지가 있다: label smoothing과 temperature tuning.
 
