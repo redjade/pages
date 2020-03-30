@@ -2,7 +2,7 @@
 toc: false
 layout: post
 comments: true
-categories: [fastpages]
+categories: [Meta Pseudo Label]
 hide: true
 title: <Meta Pseudo Label> 읽기
 ---
