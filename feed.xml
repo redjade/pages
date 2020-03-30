@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-30T09:21:33-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">읽기</title><link href="https://redjade.github.io/pages/fastpages/2020/03/30/meta-pseudo-label.html" rel="alternate" type="text/html" title="&lt;Meta Pseudo Label&gt; 읽기" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://redjade.github.io/pages/fastpages/2020/03/30/meta-pseudo-label</id><content type="html" xml:base="https://redjade.github.io/pages/fastpages/2020/03/30/meta-pseudo-label.html">&lt;h1 id=&quot;훑기&quot;&gt;훑기&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-30T09:54:30-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">읽기</title><link href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" rel="alternate" type="text/html" title="&lt;Meta Pseudo Label&gt; 읽기" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label</id><content type="html" xml:base="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html">&lt;h1 id=&quot;meta-pseudo-labels-훑기&quot;&gt;Meta Pseudo Labels 훑기&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;심층신경망 학습은 네트웍의 예측과 타겟 분포 사이의 cross entropy를 최소화하는 것으로 해석할 수 있음.&lt;/li&gt;
@@ -19,11 +19,18 @@
   &lt;li&gt;cross entropy loss : KL divergence from a target distribution over all the possible classes to the distribution predicted by a network
     &lt;ul&gt;
       &lt;li&gt;여기서 자연스레 이어지는 질문: 이 타겟 분포는 무엇이어야 하지?&lt;/li&gt;
-      &lt;li&gt;지도학습의 경우, one-hot, smoothed version of one-hot(label smoothing&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
-      &lt;li&gt;준지도학습의 경우, pseudo label이라고 부르는 타겟 분포를 부르는데,&lt;/li&gt;
+      &lt;li&gt;지도학습의 경우, one-hot, smoothed version of one-hot(label smoothing&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
+      &lt;li&gt;준지도학습의 경우, pseudo label라고도 부르는 타겟 분포를 사용하는데,&lt;/li&gt;
       &lt;li&gt;label 있는 데이터로 학습한 날카로워지고 무뎌진(약해진) teacher 모델을 이용해서&lt;/li&gt;
-      &lt;li&gt;label 없는 데이터를 처리한 분포를 타겟 분포로 사용한다.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+      &lt;li&gt;label 없는 데이터를 처리한 분포를 타겟 분포로 사용한다.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;이 두 경우 모두 학습 전의 _사전 정보(prior)_로 디자인한 경험지식(heuristic)이라서, 학습되는 신경망의 학습 상태에 맞춰서 조정할 수 없다는 약점이 내재해 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;그래서 타겟 분포를 메타-학습할 수 있는 방법을 제안함.
+    &lt;ul&gt;
+      &lt;li&gt;teacher model 디자인 : 메인 모델(앞으로 student 모델이라고 부르겠음)을 학습할 때 사용할 input data에 대해서 분포를 할당함.&lt;/li&gt;
+      &lt;li&gt;student model 학습 : student model을 검증 데이터셋으로 진행한 성능 평가를 근거로 해서, 다음번에 검증 데이터셋으로 더 나은 성능을 보일 만한 타겟 분포를 teacher가 생성함.&lt;/li&gt;
+      &lt;li&gt;이 방법이 pseudo label 기법과 유사해서 _Meta Pseudo Label_이라고 이름붙임.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -31,25 +38,34 @@
 &lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;https://arxiv.org/abs/2003.10580&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2003.10580&quot;&gt;Meta Pseudo Labels&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&quot;용어&quot;&gt;용어&lt;/h1&gt;
+&lt;h2 id=&quot;label-smoothing&quot;&gt;Label Smoothing&lt;/h2&gt;
+&lt;h2 id=&quot;준지도학습에서-pseudo-label&quot;&gt;준지도학습에서 pseudo label&lt;/h2&gt;
+&lt;h2 id=&quot;pseudo-label&quot;&gt;Pseudo Label&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf&quot;&gt;Pseudo-Label&lt;/a&gt; 방법은, 사전학습된 모델로 label 없는 데이터를 처리한 예측 확률의 최대값을 해당 데이터의 타겟 클래스로 삼는 방법이다. 사전학습된 모델을 이용해서, label 데이터와 unlabel 데이터를 &lt;em&gt;동시에&lt;/em&gt; 학습한다. unlabel 데이터의 loss function은 지도학습의 loss와 동일한 형태를 가지되 regularizer 스타일로 loss function에 더하며 hyperparameter로 강도를 조절한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;cluster assumption&lt;/em&gt;&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;에 따르면, 일반화를 위해서 결정 경계(decision boundary)는 저밀도 구간에 있어야 한다. 한편, &lt;em&gt;entropy regularization&lt;/em&gt;&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;에 따르면 레이블 없는 데이터가 보여주는 클래스 확률 분포의 조건부 엔트로피를 최소화할 때 클래스 사이의 밀도 분포를 낮게 만들어준다. 즉, 클래스 사이의 분포를 덜 겹치게하기 위해서 unlabel 데이터의 엔트로피를 최소화하는 것이다. Pseudo Label 논문은 pseudo label로 추가한 loss가 entropy regularization의 형태와 동일함을 보이고 있다.&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;When Does Label Smoothing Help? https://arxiv.org/abs/1906.02629 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Yves  Grandvalet  and  Yoshua  Bengio,   Entropy  Regularization,    In: Semi-Supervised  Learning,  pages 151–168, MIT Press, 2006. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Rethinking the Inception Architecture for Computer Vision https://arxiv.org/abs/1512.00567 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1512.00567&quot;&gt;Rethinking the Inception Architecture for Computer Vision&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Unsupervised Data Augmentation for Consistency Training https://arxiv.org/abs/1904.12848 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1904.12848&quot;&gt;Unsupervised Data Augmentation for Consistency Training&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;MixMatch: A Holistic Approach to Semi-Supervised Learning https://arxiv.org/abs/1905.02249 &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1905.02249&quot;&gt;MixMatch: A Holistic Approach to Semi-Supervised Learning&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">훑기</summary></entry><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Meta Pseudo Labels 훑기</summary></entry><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;국문 번역 트윗 : https://twitter.com/Imseong/status/1239212007779229696&lt;/li&gt;
   &lt;li&gt;원문 : https://twitter.com/intentionally/status/1234918066649272325
