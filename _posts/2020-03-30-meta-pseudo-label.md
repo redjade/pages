@@ -6,7 +6,7 @@ categories: [Meta Pseudo Label]
 hide: true
 title: 논문 읽기 - Meta Pseudo Label
 ---
-# Meta Pseudo Label
+# Meta Pseudo Label 논문과 2차 자료
 * [Meta Pseudo Labels](https://arxiv.org/abs/2003.10580)
 * [Meta Pseudo Labels Review](https://youtu.be/yhItocvAaq0) by Henry AI Labs
 
@@ -41,7 +41,7 @@ title: 논문 읽기 - Meta Pseudo Label
   * C개의 클래스가 있고 $\Theta$로 파라미터화된 모델
   * 보통 타겟 분포 $q_* ( Y \mid X )$와 모델 분포 $p_\Theta ( Y \mid X )$ 사이의 크로스 엔트로피를 최소화함
 * 완전 지도 학습에서는, 타겟 분포는 one-hot 벡터로 정의된다.
-* knowledge distillation에서는 잘 학습된 더 큰 모델의 "dark knowledge"를 작은 모델로 압축한다. 더 큰 모델의 분포를 타겟 분포로 사용한다.
+* 지식 증류(knowledge distillation)에서는 잘 학습된 더 큰 모델의 "dark knowledge"를 작은 모델로 압축한다. 더 큰 모델의 분포를 타겟 분포로 사용한다.
 * 준지도 학습에서는, 제한된 label 데이터로 학습한 $q_\xi$ 모델로 unlabl 데이터의 클래스를 예측한 분포를 사용한다. 두 가지 버전이 있다. 그런데 이 둘은 일반적으로 잘 작동하지만 종종 최적의 선택이 아니라는 최근 연구가 있다.
 
 Hard label : $q_* ( Y \mid x ) \overset{\Delta}{=} one-hot(argmax_y q_\xi ( y \mid x ))$
@@ -51,9 +51,34 @@ Soft label : $q_* ( Y \mid x ) \overset{\Delta}{=} q_\xi ( Y \mid x )$
 * 타겟 분포를 약간 조정하는 휴리스틱 두 가지가 있다: label smoothing과 temperature tuning.
 
 ## Label smoothing
+* one-hot 벡터를 타겟 분포로 사용하는 기계 번역이나 대규모 이미지 분류기의 경우에 overfitting이 발생할 수 있음.
+* 이를 완화하기 위해, 모든 클래스에 일정 비율만큼 동일한 weight를 줘서 타겟 분포를 수정하는 기법.
+* 수렴에 도움을 주지만 학습이 느려짐.
 
 ## Temperature tuning
 
+* 지식 증류와 soft label을 사용하는 준지도 학습에서 temperature를 사용하면 도움이 됨.
+* 타겟 분포 계산시 각 클래스의 logit에 temperature $\tau$를 나눈 값을 softmax 계산시 사용.
+  * $\tau$가 1보다 크면 분포를 부드럽게 만들고, $\tau$가 1보다 작으면 분포를 뾰족하게 만듬. 0으로 가까워지면 one-hot 인코딩이 됨.
+  * 부드러운 분포가 overfitting을 방지하고, 준지도 학습의 초반에 발생하는 에러를 완화함.
+  * 반대로 뾰족한 분포는 해당 데이터의 정보가 옳다는 전제 하에 학습을 빠르게 진행해줄 수 있음.
+
+## 접근
+
+* 알고리즘 설계에 있어서 타겟 분포가 중요한 역할을 하고, 적당한 방법이 의미 있는 효과를 거둠을 알 수 있음.
+* 이에 착안해서 이 논문은 이런 질문을 던져봄.
+  * _현존하는 알고리즘에서 타겟 분포를 성능에 좋은 기여를 하도록 변경하는 일반적(generic)이고 시스템적(systematic)인 방법이 있을까?_
+* 기존의 방법에는 다음과 같은 본질적인 한계를 확인함
+  * 타겟 분포 $q_*$는 학습 전에 미리 정해지고, 계속 그대로 유지되거나 ad-hoc한 방식으로 늘이고 줄이거나 업데이트함.
+  * 타겟 분포 $q_*$의 조정(부드럽게 또는 뾰족하게)은 데이터에 의존하지 않음.
+* 이상적으로 생각해본다면 타겟 분포 $q_*$는 $p_\Theta$의 학습 상태에 따라 조정되는 게 좋음.
+  * 예를 들면, 특정 데이터에 대해 충분한 확신이 있다면 overfitting을 방지하기 위해 분포가 부드러워질 필요가 있음.
+  * 그림 3을 보면, 학습 데이터와 검증 데이터의 불일치라는 관점에서 보면, 학습 데이터의 loss에 따른 그래디언트가 검증 데이터의 loss의 관점에서는 안 좋은 local minimum 방향일 수 있다.
+
+# Meta Pseudo Label 
+
+* 논문의 접근은, $p_\Theta$ 학습 과정에서 $q_*$를 학습해보자는 것이다.
+  * 타겟 분포 $q_*$를 $q_\Psi$로 파라미터화하고, $\Psi$를 경사하강법으로 학습.
 
 # 용어
 ## Label Smoothing
