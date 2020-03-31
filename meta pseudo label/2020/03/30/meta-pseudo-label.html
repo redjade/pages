@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="논문 읽기 - Meta Pseudo Label" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Meta Pseudo Labels" />
-<meta property="og:description" content="Meta Pseudo Labels" />
+<meta name="description" content="Meta Pseudo Label Meta Pseudo Labels" />
+<meta property="og:description" content="Meta Pseudo Label Meta Pseudo Labels" />
 <link rel="canonical" href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" />
 <meta property="og:url" content="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" />
 <meta property="og:site_name" content="redjade pages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-03-30T00:00:00-05:00","dateModified":"2020-03-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html"},"description":"Meta Pseudo Labels","@type":"BlogPosting","url":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html","headline":"논문 읽기 - Meta Pseudo Label","@context":"https://schema.org"}</script>
+{"datePublished":"2020-03-30T00:00:00-05:00","dateModified":"2020-03-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html"},"description":"Meta Pseudo Label Meta Pseudo Labels","@type":"BlogPosting","url":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html","headline":"논문 읽기 - Meta Pseudo Label","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/pages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://redjade.github.io/pages/feed.xml" title="redjade pages" />
 
@@ -26,15 +26,15 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="논문 읽기 - Meta Pseudo Label" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Meta Pseudo Labels" />
-<meta property="og:description" content="Meta Pseudo Labels" />
+<meta name="description" content="Meta Pseudo Label Meta Pseudo Labels" />
+<meta property="og:description" content="Meta Pseudo Label Meta Pseudo Labels" />
 <link rel="canonical" href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" />
 <meta property="og:url" content="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" />
 <meta property="og:site_name" content="redjade pages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-03-30T00:00:00-05:00","dateModified":"2020-03-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html"},"description":"Meta Pseudo Labels","@type":"BlogPosting","url":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html","headline":"논문 읽기 - Meta Pseudo Label","@context":"https://schema.org"}</script>
+{"datePublished":"2020-03-30T00:00:00-05:00","dateModified":"2020-03-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html"},"description":"Meta Pseudo Label Meta Pseudo Labels","@type":"BlogPosting","url":"https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html","headline":"논문 읽기 - Meta Pseudo Label","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -128,34 +128,30 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#"></a>
+<li class="toc-entry toc-h1"><a href="#meta-pseudo-label">Meta Pseudo Label</a></li>
+<li class="toc-entry toc-h1"><a href="#훑기">훑기</a></li>
+<li class="toc-entry toc-h1"><a href="#들어가기">들어가기</a></li>
+<li class="toc-entry toc-h1"><a href="#동기">동기</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#훑기">훑기</a></li>
-<li class="toc-entry toc-h2"><a href="#들어가기">들어가기</a></li>
-<li class="toc-entry toc-h2"><a href="#동기">동기</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#label-smoothing">Label smoothing</a></li>
-<li class="toc-entry toc-h3"><a href="#temperature-tuning">Temperature tuning</a></li>
+<li class="toc-entry toc-h2"><a href="#label-smoothing">Label smoothing</a></li>
+<li class="toc-entry toc-h2"><a href="#temperature-tuning">Temperature tuning</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#용어">용어</a>
+<li class="toc-entry toc-h1"><a href="#용어">용어</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#label-smoothing-1">Label Smoothing</a></li>
-<li class="toc-entry toc-h3"><a href="#준지도학습에서-pseudo-label">준지도학습에서 pseudo label</a></li>
-<li class="toc-entry toc-h3"><a href="#pseudo-label">Pseudo Label</a></li>
+<li class="toc-entry toc-h2"><a href="#label-smoothing-1">Label Smoothing</a></li>
+<li class="toc-entry toc-h2"><a href="#준지도학습에서-pseudo-label">준지도학습에서 pseudo label</a></li>
+<li class="toc-entry toc-h2"><a href="#pseudo-label">Pseudo Label</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul><h1>
-<a class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a><meta pseudo="" label="">
-</h1>
+</ul><h1 id="meta-pseudo-label">
+<a class="anchor" href="#meta-pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>Meta Pseudo Label</h1>
 <ul>
   <li><a href="https://arxiv.org/abs/2003.10580">Meta Pseudo Labels</a></li>
 </ul>
 
-<h2 id="훑기">
-<a class="anchor" href="#%ED%9B%91%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>훑기</h2>
+<h1 id="훑기">
+<a class="anchor" href="#%ED%9B%91%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>훑기</h1>
 
 <ul>
   <li>심층신경망 학습은 네트웍의 예측과 타겟 분포 사이의 cross entropy를 최소화하는 것으로 해석할 수 있음.</li>
@@ -170,8 +166,8 @@ window.onload = wrap_img;
   <li>실험은 CIFAR-10, SVHN, ImageNet 에서 state-of-the-art.</li>
 </ul>
 
-<h2 id="들어가기">
-<a class="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>들어가기</h2>
+<h1 id="들어가기">
+<a class="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>들어가기</h1>
 
 <ul>
   <li>cross entropy loss : KL divergence from a target distribution over all the possible classes to the distribution predicted by a network
@@ -195,8 +191,8 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<h2 id="동기">
-<a class="anchor" href="#%EB%8F%99%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>동기</h2>
+<h1 id="동기">
+<a class="anchor" href="#%EB%8F%99%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>동기</h1>
 <ul>
   <li>세팅
     <ul>
@@ -217,20 +213,20 @@ window.onload = wrap_img;
   <li>타겟 분포를 약간 조정하는 휴리스틱 두 가지가 있다: label smoothing과 temperature tuning.</li>
 </ul>
 
-<h3 id="label-smoothing">
-<a class="anchor" href="#label-smoothing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Label smoothing</h3>
+<h2 id="label-smoothing">
+<a class="anchor" href="#label-smoothing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Label smoothing</h2>
 
-<h3 id="temperature-tuning">
-<a class="anchor" href="#temperature-tuning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Temperature tuning</h3>
+<h2 id="temperature-tuning">
+<a class="anchor" href="#temperature-tuning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Temperature tuning</h2>
 
-<h2 id="용어">
-<a class="anchor" href="#%EC%9A%A9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>용어</h2>
-<h3 id="label-smoothing-1">
-<a class="anchor" href="#label-smoothing-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Label Smoothing</h3>
-<h3 id="준지도학습에서-pseudo-label">
-<a class="anchor" href="#%EC%A4%80%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5%EC%97%90%EC%84%9C-pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>준지도학습에서 pseudo label</h3>
-<h3 id="pseudo-label">
-<a class="anchor" href="#pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pseudo Label</h3>
+<h1 id="용어">
+<a class="anchor" href="#%EC%9A%A9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>용어</h1>
+<h2 id="label-smoothing-1">
+<a class="anchor" href="#label-smoothing-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Label Smoothing</h2>
+<h2 id="준지도학습에서-pseudo-label">
+<a class="anchor" href="#%EC%A4%80%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5%EC%97%90%EC%84%9C-pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>준지도학습에서 pseudo label</h2>
+<h2 id="pseudo-label">
+<a class="anchor" href="#pseudo-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pseudo Label</h2>
 
 <p><a href="http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf">Pseudo-Label</a> 방법은, 사전학습된 모델로 label 없는 데이터를 처리한 예측 확률의 최대값을 해당 데이터의 타겟 클래스로 삼는 방법이다. 사전학습된 모델을 이용해서, label 데이터와 unlabel 데이터를 <em>동시에</em> 학습한다. unlabel 데이터의 loss function은 지도학습의 loss와 동일한 형태를 가지되 regularizer 스타일로 loss function에 더하며 hyperparameter로 강도를 조절한다.</p>
 
