@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-31T00:44:36-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">논문 읽기 - Meta Pseudo Label</title><link href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" rel="alternate" type="text/html" title="논문 읽기 - Meta Pseudo Label" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label</id><content type="html" xml:base="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html">&lt;h1 id=&quot;meta-pseudo-label&quot;&gt;Meta Pseudo Label&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-31T11:12:09-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">논문 읽기 - Meta Pseudo Label</title><link href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" rel="alternate" type="text/html" title="논문 읽기 - Meta Pseudo Label" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label</id><content type="html" xml:base="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html">&lt;h1 id=&quot;meta-pseudo-label-논문과-2차-자료&quot;&gt;Meta Pseudo Label 논문과 2차 자료&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2003.10580&quot;&gt;Meta Pseudo Labels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/yhItocvAaq0&quot;&gt;Meta Pseudo Labels Review&lt;/a&gt; by Henry AI Labs&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;훑기&quot;&gt;훑기&lt;/h1&gt;
@@ -50,7 +51,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;완전 지도 학습에서는, 타겟 분포는 one-hot 벡터로 정의된다.&lt;/li&gt;
-  &lt;li&gt;knowledge distillation에서는 잘 학습된 더 큰 모델의 “dark knowledge”를 작은 모델로 압축한다. 더 큰 모델의 분포를 타겟 분포로 사용한다.&lt;/li&gt;
+  &lt;li&gt;지식 증류(knowledge distillation)에서는 잘 학습된 더 큰 모델의 “dark knowledge”를 작은 모델로 압축한다. 더 큰 모델의 분포를 타겟 분포로 사용한다.&lt;/li&gt;
   &lt;li&gt;준지도 학습에서는, 제한된 label 데이터로 학습한 $q_\xi$ 모델로 unlabl 데이터의 클래스를 예측한 분포를 사용한다. 두 가지 버전이 있다. 그런데 이 둘은 일반적으로 잘 작동하지만 종종 최적의 선택이 아니라는 최근 연구가 있다.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -63,8 +64,57 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;label-smoothing&quot;&gt;Label smoothing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;one-hot 벡터를 타겟 분포로 사용하는 기계 번역이나 대규모 이미지 분류기의 경우에 overfitting이 발생할 수 있음.&lt;/li&gt;
+  &lt;li&gt;이를 완화하기 위해, 모든 클래스에 일정 비율만큼 동일한 weight를 줘서 타겟 분포를 수정하는 기법.&lt;/li&gt;
+  &lt;li&gt;수렴에 도움을 주지만 학습이 느려짐.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;temperature-tuning&quot;&gt;Temperature tuning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;지식 증류와 soft label을 사용하는 준지도 학습에서 temperature를 사용하면 도움이 됨.&lt;/li&gt;
+  &lt;li&gt;타겟 분포 계산시 각 클래스의 logit에 temperature $\tau$를 나눈 값을 softmax 계산시 사용.
+    &lt;ul&gt;
+      &lt;li&gt;$\tau$가 1보다 크면 분포를 부드럽게 만들고, $\tau$가 1보다 작으면 분포를 뾰족하게 만듬. 0으로 가까워지면 one-hot 인코딩이 됨.&lt;/li&gt;
+      &lt;li&gt;부드러운 분포가 overfitting을 방지하고, 준지도 학습의 초반에 발생하는 에러를 완화함.&lt;/li&gt;
+      &lt;li&gt;반대로 뾰족한 분포는 해당 데이터의 정보가 옳다는 전제 하에 학습을 빠르게 진행해줄 수 있음.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;접근&quot;&gt;접근&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;알고리즘 설계에 있어서 타겟 분포가 중요한 역할을 하고, 적당한 방법이 의미 있는 효과를 거둠을 알 수 있음.&lt;/li&gt;
+  &lt;li&gt;이에 착안해서 이 논문은 이런 질문을 던져봄.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;현존하는 알고리즘에서 타겟 분포를 성능에 좋은 기여를 하도록 변경하는 일반적(generic)이고 시스템적(systematic)인 방법이 있을까?&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;기존의 방법에는 다음과 같은 본질적인 한계를 확인함
+    &lt;ul&gt;
+      &lt;li&gt;타겟 분포 $q_*$는 학습 전에 미리 정해지고, 계속 그대로 유지되거나 ad-hoc한 방식으로 늘이고 줄이거나 업데이트함.&lt;/li&gt;
+      &lt;li&gt;타겟 분포 $q_*$의 조정(부드럽게 또는 뾰족하게)은 데이터에 의존하지 않음.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이상적으로 생각해본다면 타겟 분포 $q_*$는 $p_\Theta$의 학습 상태에 따라 조정되는 게 좋음.
+    &lt;ul&gt;
+      &lt;li&gt;예를 들면, 특정 데이터에 대해 충분한 확신이 있다면 overfitting을 방지하기 위해 분포가 부드러워질 필요가 있음.&lt;/li&gt;
+      &lt;li&gt;그림 3을 보면, 학습 데이터와 검증 데이터의 불일치라는 관점에서 보면, 학습 데이터의 loss에 따른 그래디언트가 검증 데이터의 loss의 관점에서는 안 좋은 local minimum 방향일 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;meta-pseudo-label&quot;&gt;Meta Pseudo Label&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;논문의 접근은, $p_\Theta$ 학습 과정에서 $q_*$를 학습해보자는 것이다.
+    &lt;ul&gt;
+      &lt;li&gt;타겟 분포 $q_*$를 $q_\Psi$로 파라미터화하고, $\Psi$를 경사하강법으로 학습.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;용어&quot;&gt;용어&lt;/h1&gt;
 &lt;h2 id=&quot;label-smoothing-1&quot;&gt;Label Smoothing&lt;/h2&gt;
@@ -96,7 +146,7 @@
       &lt;p&gt;Yves  Grandvalet  and  Yoshua  Bengio,   Entropy  Regularization,    In: Semi-Supervised  Learning,  pages 151–168, MIT Press, 2006. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Meta Pseudo Label Meta Pseudo Labels</summary></entry><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Meta Pseudo Label 논문과 2차 자료 Meta Pseudo Labels Meta Pseudo Labels Review by Henry AI Labs</summary></entry><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;국문 번역 트윗 : https://twitter.com/Imseong/status/1239212007779229696&lt;/li&gt;
   &lt;li&gt;원문 : https://twitter.com/intentionally/status/1234918066649272325
