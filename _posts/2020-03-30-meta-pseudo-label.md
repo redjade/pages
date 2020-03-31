@@ -4,10 +4,12 @@ layout: post
 comments: true
 categories: [Meta Pseudo Label]
 hide: true
-title: <Meta Pseudo Label> 읽기
+title: 논문 읽기 - Meta Pseudo Label
 ---
+# <Meta Pseudo Label>
+* [Meta Pseudo Labels](https://arxiv.org/abs/2003.10580)
 
-# Meta Pseudo Labels 훑기
+## 훑기
 
 * 심층신경망 학습은 네트웍의 예측과 타겟 분포 사이의 cross entropy를 최소화하는 것으로 해석할 수 있음.
 * 지도학습에서 타겟 분포는 보통 실제 one-hot 벡터.
@@ -17,7 +19,7 @@ title: <Meta Pseudo Label> 읽기
   * 따로 떼놓은 검증 데이터(held-out validation data)로 계산한 policy gradient로 teacher를 학습함. 
 * 실험은 CIFAR-10, SVHN, ImageNet 에서 state-of-the-art.
 
-# 들어가기
+## 들어가기
 
 * cross entropy loss : KL divergence from a target distribution over all the possible classes to the distribution predicted by a network
   * 여기서 자연스레 이어지는 질문: 이 타겟 분포는 무엇이어야 하지?
@@ -33,7 +35,7 @@ title: <Meta Pseudo Label> 읽기
   * 이 방법이 pseudo label 기법과 유사해서 _Meta Pseudo Label_이라고 이름붙임.
   * MPL을 사용하면, student의 학습 상태에 따라서 타겟 분포를 조정할 수 있어서, pseudo label과 지도 학습을 사용한 분류기보다 더 나은 성능을 보여준다.
 
-# 동기
+## 동기
 * 세팅
   * C개의 클래스가 있고 $\Theta$로 파라미터화된 모델
   * 보통 타겟 분포 $q_* ( Y \mid X )$와 모델 분포 $p_\Theta ( Y \mid X )$ 사이의 크로스 엔트로피를 최소화함
@@ -47,19 +49,15 @@ Soft label : $q_* ( Y \mid x ) \overset{\Delta}{=} q_\xi ( Y \mid x )$
 
 * 타겟 분포를 약간 조정하는 휴리스틱 두 가지가 있다: label smoothing과 temperature tuning.
 
-## Label smoothing
+### Label smoothing
 
-## Temperature tuning
+### Temperature tuning
 
 
-# 참고
-
-* [Meta Pseudo Labels](https://arxiv.org/abs/2003.10580)
-
-# 용어
-## Label Smoothing
-## 준지도학습에서 pseudo label
-## Pseudo Label
+## 용어
+### Label Smoothing
+### 준지도학습에서 pseudo label
+### Pseudo Label
 
 [Pseudo-Label](http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf) 방법은, 사전학습된 모델로 label 없는 데이터를 처리한 예측 확률의 최대값을 해당 데이터의 타겟 클래스로 삼는 방법이다. 사전학습된 모델을 이용해서, label 데이터와 unlabel 데이터를 _동시에_ 학습한다. unlabel 데이터의 loss function은 지도학습의 loss와 동일한 형태를 가지되 regularizer 스타일로 loss function에 더하며 hyperparameter로 강도를 조절한다. 
 
