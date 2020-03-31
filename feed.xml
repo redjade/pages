@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-31T00:34:41-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">읽기</title><link href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" rel="alternate" type="text/html" title="&lt;Meta Pseudo Label&gt; 읽기" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label</id><content type="html" xml:base="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html">&lt;h1 id=&quot;meta-pseudo-labels-훑기&quot;&gt;Meta Pseudo Labels 훑기&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://redjade.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://redjade.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-03-31T00:41:14-05:00</updated><id>https://redjade.github.io/pages/feed.xml</id><title type="html">redjade pages</title><subtitle>Pages by redjade.</subtitle><entry><title type="html">논문 읽기 - Meta Pseudo Label</title><link href="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html" rel="alternate" type="text/html" title="논문 읽기 - Meta Pseudo Label" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label</id><content type="html" xml:base="https://redjade.github.io/pages/meta%20pseudo%20label/2020/03/30/meta-pseudo-label.html">&lt;h1&gt;&lt;meta pseudo=&quot;&quot; label=&quot;&quot; /&gt;&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2003.10580&quot;&gt;Meta Pseudo Labels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;훑기&quot;&gt;훑기&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;심층신경망 학습은 네트웍의 예측과 타겟 분포 사이의 cross entropy를 최소화하는 것으로 해석할 수 있음.&lt;/li&gt;
@@ -13,7 +18,7 @@
   &lt;li&gt;실험은 CIFAR-10, SVHN, ImageNet 에서 state-of-the-art.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;들어가기&quot;&gt;들어가기&lt;/h1&gt;
+&lt;h2 id=&quot;들어가기&quot;&gt;들어가기&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;cross entropy loss : KL divergence from a target distribution over all the possible classes to the distribution predicted by a network
@@ -36,7 +41,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;동기&quot;&gt;동기&lt;/h1&gt;
+&lt;h2 id=&quot;동기&quot;&gt;동기&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;세팅
     &lt;ul&gt;
@@ -57,20 +62,14 @@
   &lt;li&gt;타겟 분포를 약간 조정하는 휴리스틱 두 가지가 있다: label smoothing과 temperature tuning.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;label-smoothing&quot;&gt;Label smoothing&lt;/h2&gt;
+&lt;h3 id=&quot;label-smoothing&quot;&gt;Label smoothing&lt;/h3&gt;
 
-&lt;h2 id=&quot;temperature-tuning&quot;&gt;Temperature tuning&lt;/h2&gt;
+&lt;h3 id=&quot;temperature-tuning&quot;&gt;Temperature tuning&lt;/h3&gt;
 
-&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2003.10580&quot;&gt;Meta Pseudo Labels&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;용어&quot;&gt;용어&lt;/h1&gt;
-&lt;h2 id=&quot;label-smoothing-1&quot;&gt;Label Smoothing&lt;/h2&gt;
-&lt;h2 id=&quot;준지도학습에서-pseudo-label&quot;&gt;준지도학습에서 pseudo label&lt;/h2&gt;
-&lt;h2 id=&quot;pseudo-label&quot;&gt;Pseudo Label&lt;/h2&gt;
+&lt;h2 id=&quot;용어&quot;&gt;용어&lt;/h2&gt;
+&lt;h3 id=&quot;label-smoothing-1&quot;&gt;Label Smoothing&lt;/h3&gt;
+&lt;h3 id=&quot;준지도학습에서-pseudo-label&quot;&gt;준지도학습에서 pseudo label&lt;/h3&gt;
+&lt;h3 id=&quot;pseudo-label&quot;&gt;Pseudo Label&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf&quot;&gt;Pseudo-Label&lt;/a&gt; 방법은, 사전학습된 모델로 label 없는 데이터를 처리한 예측 확률의 최대값을 해당 데이터의 타겟 클래스로 삼는 방법이다. 사전학습된 모델을 이용해서, label 데이터와 unlabel 데이터를 &lt;em&gt;동시에&lt;/em&gt; 학습한다. unlabel 데이터의 loss function은 지도학습의 loss와 동일한 형태를 가지되 regularizer 스타일로 loss function에 더하며 hyperparameter로 강도를 조절한다.&lt;/p&gt;
 
@@ -97,7 +96,7 @@
       &lt;p&gt;Yves  Grandvalet  and  Yoshua  Bengio,   Entropy  Regularization,    In: Semi-Supervised  Learning,  pages 151–168, MIT Press, 2006. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Meta Pseudo Labels 훑기</summary></entry><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Meta Pseudo Labels</summary></entry><entry><title type="html">노트 작성법 소개</title><link href="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html" rel="alternate" type="text/html" title="노트 작성법 소개" /><published>2020-03-18T00:00:00-05:00</published><updated>2020-03-18T00:00:00-05:00</updated><id>https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking</id><content type="html" xml:base="https://redjade.github.io/pages/note%20taking/%EB%85%B8%ED%8A%B8%20%EC%9E%91%EC%84%B1%EB%B2%95/2020/03/18/note-taking.html">&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;국문 번역 트윗 : https://twitter.com/Imseong/status/1239212007779229696&lt;/li&gt;
   &lt;li&gt;원문 : https://twitter.com/intentionally/status/1234918066649272325
