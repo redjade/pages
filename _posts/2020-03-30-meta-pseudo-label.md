@@ -8,6 +8,7 @@ title: 논문 읽기 - Meta Pseudo Label
 ---
 # Meta Pseudo Label
 * [Meta Pseudo Labels](https://arxiv.org/abs/2003.10580)
+* [Meta Pseudo Labels Review](https://youtu.be/yhItocvAaq0) by Henry AI Labs
 
 # 훑기
 
